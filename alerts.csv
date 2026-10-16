@@ -1,0 +1,4 @@
+severity,user,time,rule,details
+HIGH,contractor_demo,2022-09-15 10:01:00,MFA_PROMPT_BURST,5 MFA prompts within 10 minutes; review for MFA fatigue.
+CRITICAL,contractor_demo,2022-09-15 10:06:00,MFA_APPROVED_AFTER_BURST,MFA approval followed a detected prompt burst.
+MEDIUM,contractor_demo,2022-09-15 10:12:00,RESOURCE_ACCESS_AFTER_ALERT,Access to 'internal_chat_demo' occurred within 30 minutes of a suspicious authentication alert.

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+reports/*.txt
+reports/alerts.csv
+build/
+dist/
+*.spec
+.venv/

@@ -1,0 +1,2 @@
+Educational use: You may use, modify, and share this sample project for academic purposes.
+This project is provided as-is without warranty. It is not affiliated with Uber.

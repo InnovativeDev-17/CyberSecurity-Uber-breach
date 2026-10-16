@@ -1,0 +1,12 @@
+timestamp,user,event,source_ip,resource
+2022-09-15T10:00:00,contractor_demo,LOGIN_FAILURE,192.0.2.10,identity_provider
+2022-09-15T10:01:00,contractor_demo,MFA_PROMPT,192.0.2.10,identity_provider
+2022-09-15T10:02:00,contractor_demo,MFA_PROMPT,192.0.2.10,identity_provider
+2022-09-15T10:03:00,contractor_demo,MFA_PROMPT,192.0.2.10,identity_provider
+2022-09-15T10:04:00,contractor_demo,MFA_PROMPT,192.0.2.10,identity_provider
+2022-09-15T10:05:00,contractor_demo,MFA_PROMPT,192.0.2.10,identity_provider
+2022-09-15T10:06:00,contractor_demo,MFA_APPROVED,192.0.2.10,identity_provider
+2022-09-15T10:07:00,contractor_demo,LOGIN_SUCCESS,192.0.2.10,identity_provider
+2022-09-15T10:12:00,contractor_demo,RESOURCE_ACCESS,192.0.2.10,internal_chat_demo
+2022-09-15T10:13:00,analyst_demo,LOGIN_SUCCESS,198.51.100.22,identity_provider
+2022-09-15T10:15:00,analyst_demo,RESOURCE_ACCESS,198.51.100.22,reporting_demo

@@ -1,0 +1,33 @@
+UBER BREACH CASE STUDY — EDUCATIONAL LOG ANALYSIS
+==========================================================
+
+NOTICE: This is a simulation using synthetic data, not Uber logs.
+Events analysed: 11
+Alerts generated: 3
+
+DETECTION ALERTS
+----------------------------------------------------------
+1. [HIGH] MFA_PROMPT_BURST | user=contractor_demo | time=2022-09-15 10:01:00
+   5 MFA prompts within 10 minutes; review for MFA fatigue.
+2. [CRITICAL] MFA_APPROVED_AFTER_BURST | user=contractor_demo | time=2022-09-15 10:06:00
+   MFA approval followed a detected prompt burst.
+3. [MEDIUM] RESOURCE_ACCESS_AFTER_ALERT | user=contractor_demo | time=2022-09-15 10:12:00
+   Access to 'internal_chat_demo' occurred within 30 minutes of a suspicious authentication alert.
+
+CHRONOLOGICAL EVENT TIMELINE
+----------------------------------------------------------
+2022-09-15 10:00:00 | user=contractor_demo | event=LOGIN_FAILURE | source=192.0.2.10 | resource=identity_provider
+2022-09-15 10:01:00 | user=contractor_demo | event=MFA_PROMPT | source=192.0.2.10 | resource=identity_provider
+2022-09-15 10:02:00 | user=contractor_demo | event=MFA_PROMPT | source=192.0.2.10 | resource=identity_provider
+2022-09-15 10:03:00 | user=contractor_demo | event=MFA_PROMPT | source=192.0.2.10 | resource=identity_provider
+2022-09-15 10:04:00 | user=contractor_demo | event=MFA_PROMPT | source=192.0.2.10 | resource=identity_provider
+2022-09-15 10:05:00 | user=contractor_demo | event=MFA_PROMPT | source=192.0.2.10 | resource=identity_provider
+2022-09-15 10:06:00 | user=contractor_demo | event=MFA_APPROVED | source=192.0.2.10 | resource=identity_provider
+2022-09-15 10:07:00 | user=contractor_demo | event=LOGIN_SUCCESS | source=192.0.2.10 | resource=identity_provider
+2022-09-15 10:12:00 | user=contractor_demo | event=RESOURCE_ACCESS | source=192.0.2.10 | resource=internal_chat_demo
+2022-09-15 10:13:00 | user=analyst_demo | event=LOGIN_SUCCESS | source=198.51.100.22 | resource=identity_provider
+2022-09-15 10:15:00 | user=analyst_demo | event=RESOURCE_ACCESS | source=198.51.100.22 | resource=reporting_demo
+
+INTERPRETATION
+----------------------------------------------------------
+Alerts are indicators for human review, not proof of compromise. Recommended controls include phishing-resistant MFA, rate limits, least privilege, secrets management, and identity monitoring.
